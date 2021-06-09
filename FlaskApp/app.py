@@ -21,7 +21,7 @@ try:
         else:
             title = content['title']
             episode = content['name'] + " " + content['season']
-            time_remaining = "Time Left: " + content['time_left']
+            time_remaining = "Time Left: " + "(" + content['time_left'] + ")"
             url_episode = content['episode_url']
             p.update(state=episode, details=title, large_image="netflix", large_text=time_remaining, buttons=[{"label": "Watch on Netflix", "url": url_episode}])
             os.system('cls')
