@@ -4,7 +4,7 @@ const timer = setInterval(function (){
         var episodeNum = document.getElementsByClassName('ellipsize-text')[0].getElementsByTagName('span')[0].innerText;
         var episodeName = document.getElementsByClassName('ellipsize-text')[0].getElementsByTagName('span')[1].innerText;
         var timeRemaining = document.getElementsByClassName('time-remaining__time')[0].innerText;
-        var episodeUrl = document.baseURI;
+        var episodeUrl = window.location.href.split('?')[0];
         var xhr = new XMLHttpRequest();
         xhr.open("POST", 'http://127.0.0.1:5000/send', true);
         xhr.setRequestHeader("Content-Type", "application/json");
