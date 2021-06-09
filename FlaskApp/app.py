@@ -20,10 +20,9 @@ try:
             return ""
         else:
             title = content['title']
-            episode = content['name'] + " " + content['season']
-            time_remaining = "Time Left: " + "(" + content['time_left'] + ")"
+            episode = content['name'] + " " + "(" + content['season'] + ")"
             url_episode = content['episode_url']
-            p.update(state=episode, details=title, large_image="netflix", large_text=time_remaining, buttons=[{"label": "Watch on Netflix", "url": url_episode}])
+            p.update(state=episode, details=title, large_image="netflix", large_text="Netflix", buttons=[{"label": "Watch on Netflix", "url": url_episode}])
             os.system('cls')
             print("Updating:\nTitle: {}\nEpisode: {}\nTime Left: {}".format(title, episode, time_remaining))
             return ""
