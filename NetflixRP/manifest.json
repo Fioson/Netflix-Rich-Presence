@@ -1,7 +1,7 @@
 {
     "name": "Netflix Rich Presence",
     "version": "1.1",
-    "description": "Track what movie/show you're watching and show it on Discord!",
+    "description": "Track what movie/show you're watching and show it on Discord (includes buttons)! Modified version by github.com/Fioson. Original by github.com/rustybalboadev.",
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
