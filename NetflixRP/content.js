@@ -4,6 +4,7 @@ const timer = setInterval(function (){
         var episodeNum = document.getElementsByClassName('ellipsize-text')[0].getElementsByTagName('span')[0].innerText;
         var episodeName = document.getElementsByClassName('ellipsize-text')[0].getElementsByTagName('span')[1].innerText;
         var timeRemaining = document.getElementsByClassName('time-remaining__time')[0].innerText;
+        var episodeUrl = document.baseURI;
         var xhr = new XMLHttpRequest();
         xhr.open("POST", 'http://127.0.0.1:5000/send', true);
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -13,6 +14,7 @@ const timer = setInterval(function (){
                 "name": episodeName,
                 "season": episodeNum,
                 "time_left": timeRemaining,
+                "episode_url": episodeUrl,
                 "done": false
             }
         );
@@ -28,6 +30,7 @@ const timer = setInterval(function (){
                 "name": "browsing",
                 "season": "browsing",
                 "time_left": "browsing",
+                "episode_url": "browsing",
                 "done": true
             }
         );
@@ -42,6 +45,7 @@ const timer = setInterval(function (){
                 "name": "not in netflix",
                 "season": "not in netflix",
                 "time_left": "not in netflix",
+                "episode_url": "not in netflix",
                 "done": true
             }
         );
