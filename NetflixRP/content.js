@@ -51,4 +51,4 @@ const timer = setInterval(function (){
         );
         xhr.send(data);
     }
-}, 5000);
+}, 50000);
